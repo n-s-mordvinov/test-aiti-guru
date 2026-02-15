@@ -2,17 +2,20 @@
   "name": "test-aiti-guru",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://n-s-mordvinov.github.io/test-aiti-guru",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@tanstack/react-table": "^8.21.3",
     "axios": "^1.13.5",
     "clsx": "^2.1.1",
+    "gh-pages": "^6.3.0",
     "notistack": "^3.0.2",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",

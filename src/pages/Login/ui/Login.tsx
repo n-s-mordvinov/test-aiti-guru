@@ -9,9 +9,10 @@ import { EyeIcon, EyeOffIcon, LockIcon, SpinnerIcon, UserIcon } from '../../../s
 import { Checkbox, Link } from '../../../shared/ui';
 import { AuthService } from '../../../shared/api/auth';
 import type { User } from '../../../shared/api/users';
+import { saveToken } from '../../../shared/utils';
+import logo from '../../../assets/logo.svg';
 
 import styles from './Login.module.scss';
-import { saveToken } from '../../../shared/utils';
 
 type Form = Pick<User, 'username' | 'password'>;
 
@@ -68,7 +69,7 @@ const LoginPage = () => {
     <div className={styles.page}>
       <div className={styles.wrapper}>
         <div className={styles.logo}>
-          <img src='/logo.svg' />
+          <img src={logo} />
         </div>
         <h1 className={styles.title}>Добро пожаловать!</h1>
         <p className={styles.text}>Пожалуйста, авторизируйтесь</p>

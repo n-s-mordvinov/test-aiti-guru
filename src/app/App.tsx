@@ -4,10 +4,10 @@ import { RouterProvider } from "react-router/dom";
 import { NotistackProvider } from "./Notistack";
 import { ProtectedRoute } from "./Routing";
 
+import './styles.css';
+
 const LoginPage = lazy(() => import('../pages/Login'));
 const ProductsPage = lazy(() => import('../pages/Products/ui/Products'));
-
-import './styles.css';
 
 const App = () => {
   const router = createBrowserRouter([
@@ -24,7 +24,9 @@ const App = () => {
       path: "/login",
       element: <LoginPage />
     },
-  ]);
+  ], {
+    basename: import.meta.env.BASE_URL
+  });
 
   return (
     <NotistackProvider>
