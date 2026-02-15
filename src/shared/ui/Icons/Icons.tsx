@@ -4,6 +4,8 @@ import ArrowsClockwiseIconSvg from '../../../assets/icons/ArrowsClockwise.svg?re
 import CaretLeftIconSvg from '../../../assets/icons/CaretLeft.svg?react';
 import CaretRightIconSvg from '../../../assets/icons/CaretRight.svg?react';
 import CloseIconSvg from '../../../assets/icons/Close.svg?react';
+import EyeIconSvg from '../../../assets/icons/Eye.svg?react';
+import EyeOffIconSvg from '../../../assets/icons/EyeOff.svg?react';
 import LockIconSvg from '../../../assets/icons/Lock.svg?react';
 import PlusCircleIconSvg from '../../../assets/icons/PlusCircle.svg?react';
 import SearchIconSvg from '../../../assets/icons/Search.svg?react';
@@ -33,6 +35,12 @@ export const CaretRightIcon: FC<IconProps> = ({ size = 20, ...props }) => (
 );
 export const CloseIcon: FC<IconProps> = ({ size = 18, ...props }) => (
   <CloseIconSvg width={size} height={size} {...props} />
+);
+export const EyeIcon: FC<IconProps> = ({ size = 24, ...props }) => (
+  <EyeIconSvg width={size} height={size} {...props} />
+);
+export const EyeOffIcon: FC<IconProps> = ({ size = 24, ...props }) => (
+  <EyeOffIconSvg width={size} height={size} {...props} />
 );
 export const LockIcon: FC<IconProps> = ({ size = 24, ...props }) => (
   <LockIconSvg width={size} height={size} {...props} />

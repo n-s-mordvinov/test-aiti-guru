@@ -5,7 +5,7 @@ import { enqueueSnackbar } from 'notistack';
 
 import { InputField } from '../../../shared/ui';
 import Button from '../../../shared/ui/Button';
-import { LockIcon, SpinnerIcon, UserIcon } from '../../../shared/ui/Icons';
+import { EyeIcon, EyeOffIcon, LockIcon, SpinnerIcon, UserIcon } from '../../../shared/ui/Icons';
 import { Checkbox, Link } from '../../../shared/ui';
 import { AuthService } from '../../../shared/api/auth';
 import type { User } from '../../../shared/api/users';
@@ -22,9 +22,14 @@ const defaultValues: Partial<Form> = {
 
 const LoginPage = () => {
   const [rememberMe, setRememberMe] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
   const navigate = useNavigate();
+
+  const onToggleShowPassword = () => {
+    setShowPassword((value) => !value)
+  }
 
   const {
       register,
@@ -81,11 +86,12 @@ const LoginPage = () => {
             id="password"
             label="Пароль"
             placeholder="Введите пароль"
-            type='password'
+            type={showPassword ? 'text' : 'password'}
             {...register("password", { required: "Обязательное поле. Введите пароль" })}
             error={errors.password?.message}
             rootClassName={styles.password}
             renderBefore={<LockIcon />}
+            renderAfter={showPassword ? <EyeIcon onClick={onToggleShowPassword} /> : <EyeOffIcon onClick={onToggleShowPassword} />}
           />
           <Checkbox
             rootClassName={styles.checkbox}
