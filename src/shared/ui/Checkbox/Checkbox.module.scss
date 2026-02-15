@@ -1,0 +1,28 @@
+.root {
+  position: relative;
+  display: inline-flex;
+  gap: 10px;
+  font-family: var(--third-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: #9c9c9c;
+  cursor: pointer;
+}
+
+.input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  opacity: 0;
+
+  &:checked ~ .icon {
+    fill: #3c538e;
+  }
+}
+
+.icon {
+  color: #EDEDED;
+}

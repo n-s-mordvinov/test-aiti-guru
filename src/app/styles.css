@@ -1,0 +1,18 @@
+:root {
+  --font-family: "Cairo", sans-serif;
+  --second-family: "Open Sans", sans-serif;
+  --third-family: "Inter", sans-serif;
+  --font3: "Roboto Mono", sans-serif;
+  --font4: "Roboto", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F9F9F9;
+  font-family: var(--font-family);
+}

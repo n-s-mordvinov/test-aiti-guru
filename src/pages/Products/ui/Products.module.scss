@@ -1,0 +1,71 @@
+.page {
+  padding-top: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  padding: 26px 30px;
+  border-radius: 10px;
+
+  &Title {
+    font-weight: 700;
+    font-size: 24px;
+    color: #202020;
+  }
+
+  &Search {
+    width: 100%;
+    max-width: 1023px;
+  }
+}
+
+.products {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 30px;
+  border-radius: 12px;
+  background: #fff;
+
+  &Header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &Title {
+      font-size: 20px;
+      line-height: 100%;
+      color: #333;
+    }
+
+    &Btns {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .updateBtn {
+      border-color: #ececeb;
+      color: #515161;
+      padding: 9px;
+    }
+  }
+
+  &SpinnerWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &Empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

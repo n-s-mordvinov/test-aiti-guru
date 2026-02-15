@@ -1,0 +1,53 @@
+.footer {
+  padding: 11px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &Shown {
+    font-family: var(--font4);
+    font-weight: 400;
+    font-size: 18px;
+    color: #969b9f;
+
+    span {
+      color: #333;
+    }
+  }
+
+  &Pagination {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    &Number {
+      border: 1px solid #ececeb;
+      border-radius: 4px;
+      width: 30px;
+      height: 30px;
+      font-weight: 400;
+      font-size: 14px;
+      color: #b2b3b9;
+      text-align: center;
+      background: transparent;
+
+      &s {
+        display: flex;
+        gap: 8px;
+      }
+
+      &Active {
+        background: #797fea;
+        border-color: #797fea;
+        color: #fff;
+      }
+    }
+
+    &Arrow {
+      width: 20px;
+      height: 20px;
+      border: none;
+      background: transparent;
+    }
+  }
+}

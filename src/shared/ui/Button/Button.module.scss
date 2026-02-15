@@ -1,0 +1,35 @@
+.button {
+  border: 1px solid transparent;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 9px 19px;
+  background-color: transparent;
+  cursor: pointer;
+
+  &Inner {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  &Text {
+    color: #367aff;
+  }
+
+  &Contained {
+    background: #242edb;
+    color: #FFFFFF;
+    border-color: #242edb;
+  }
+
+  &Outlined {
+    background: transparent;
+    color: #242edb;
+    border-color: #367aff;
+  }
+
+  &FullWidth {
+    width: 100%;
+  }
+}
